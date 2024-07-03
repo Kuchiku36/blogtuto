@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 class CommentController extends Controller
 {
+    
     public function store(Request $request, Post $post)
     {
         $request->validate([
@@ -24,5 +25,7 @@ class CommentController extends Controller
 
         return redirect()->route('posts.show', $post->id)->with('success', 'Commentaire ajouté avec succès.');
     }
+    
+    
     //
 }
