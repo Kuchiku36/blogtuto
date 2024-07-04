@@ -2,7 +2,7 @@
 
 @section('content')
     @foreach ($posts as $post)
-<img src="{{$post->image}}" alt="">
+<a href="{{route('show',$post)}}"><img src="{{$post->image}}" alt=""></a>
     {{$post->title}} <br>
     @endforeach
 
