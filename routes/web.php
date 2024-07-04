@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 
 Route::get('/index', [PostController::class, 'index'])->name('index');
+Route::get('/show/{post}', [PostController::class, 'show'])->name('show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
